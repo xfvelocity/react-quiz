@@ -1,0 +1,85 @@
+@import 'config';
+
+.question {
+  background: #ffc633;
+  border-radius: 0.5em;
+  box-shadow: 0 3px 0 rgba(0, 0, 0, 0.03) inset;
+  border-right: 10px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 6px solid rgba(0, 0, 0, 0.1);
+  width: 90%;
+  margin: 40px auto;
+  padding: 20px;
+  text-align: center;
+  @include flex;
+  flex-direction: column;
+  h3 {
+    font-size: 24px;
+    font-weight: 400;
+  }
+  &-button {
+    background: #372107;
+    color: white;
+    font-size: 18px;
+    width: 85%;
+    padding: 15px 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 0;
+    &:focus {
+      background: rgb(172, 172, 172);
+      transition: 0.5s ease-out;
+    }
+    &:hover {
+      opacity: 0.8;
+      transition: 0.5s ease-out;
+    }
+  }
+  .submit {
+    background: #335bff;
+    padding: 10px;
+    width: 100px;
+    border-radius: 5px;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    margin: 30px 0 10px 0;
+    width: 120px;
+    &:hover {
+      opacity: 0.8;
+      transition: 0.5s ease-out;
+    }
+  }
+  .score {
+    color: white;
+    background: #16ab06;
+    padding: 7px 20px;
+    border-radius: 5px;
+    width: 120px;
+    p {
+      margin: 0;
+    }
+  }
+  @media (min-width: 675px) {
+    width: 600px;
+  }
+}
+
+.one {
+  color: green;
+  font-size: 24px;
+  font-weight: 600;
+  position: absolute;
+  display: none;
+}
+
+@keyframes plus {
+  0% {
+    top: 500px;
+    right: 150px;
+  }
+  100% {
+    top: 50px;
+    right: 50px;
+  }
+}
