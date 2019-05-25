@@ -1,10 +1,9 @@
 class App extends React.Component {
-  render(props) {
+  render() {
     return (
       <div className='question'>
         <Header />
         <Button />
-        {this.props.end}
       </div>
     );
   }
@@ -68,8 +67,6 @@ class Button extends React.Component {
         this.setState(prevState => ({ i: prevState.i + 1 }));
       }
       this.setState({ pressed: null });
-      console.log(this.state.i);
-
       if (this.state.pressed.value === questions[this.state.i].correct) {
         this.setState({
           style: {
@@ -93,8 +90,6 @@ class Button extends React.Component {
           this.setState({ result: '', resultstyle: '' });
         }, 2000);
       }
-    }
-    if (this.state.i === 3) {
     }
   };
 
